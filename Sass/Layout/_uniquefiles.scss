@@ -1,0 +1,134 @@
+
+
+.pages__1
+{
+  height: 12vh;
+  width: 100%;
+   @include evenly;
+}
+
+.background__pages > img
+{  
+  object-fit: cover;
+    height: 27rem;
+    position: relative;
+    width: 100%;
+}
+
+.menu
+{
+ position: relative;
+    background-color: $color-bg1;
+    @include center_column1;
+    flex-wrap: wrap;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -4rem;
+
+
+      .menu__title
+      {
+        padding: 2rem 2rem 2rem 2rem;
+        width: 100%;
+        @include between;
+      }
+
+      .menu__container
+      {
+        @include between1;
+        flex-wrap: wrap;
+        flex-grow: 2;
+        flex-shrink: 2;
+        width: 100%;
+          .menu__entree
+            {
+              margin: 1rem;
+              height: auto;
+              width: 31%;
+            }
+
+            .menu__border
+            {
+              width: 30%;
+              text-transform: uppercase;
+              padding: 2rem 0 0rem 0;
+            }
+
+            .menu__card-entree
+            {
+              margin: 2rem 0 3rem;
+              box-shadow: 0 1px 6px;
+              border-radius: 1rem;
+              background-color: $colorB;
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: flex-end;
+              overflow: hidden;
+              z-index: 9;
+              transform: translateY(999px);
+              animation-name: fadeInUp;
+              animation-duration: 1s;
+              animation-fill-mode: both;
+
+                .menu__valid
+                {
+                  padding: 1.6rem;
+                  background: $tertiary-color;
+                  color: $colorB;
+                  border-radius: 0 1rem 1rem 0 ;
+                  transform: translate(75px);
+                  overflow: hidden;
+                  visibility: hidden;
+                  transition:all 350ms ease-in-out;
+                 @include center;
+                }
+                .menu__content
+                {
+                  
+                  display: flex;
+                  width: 100%;
+                    .menu__title-content
+                    {
+                      margin: 1rem 1rem 0;
+                      width: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      .menu__text
+                      {
+                        margin: 1rem 0;
+                        display: flex;
+                        justify-content: space-between;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      }
+            
+                      .menu__line,p
+                      {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      }
+                   }
+                }
+            }
+
+
+
+
+            .menu__card-entree:hover > .menu__valid 
+            {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            }
+            
+            .menu__card-entree:hover .menu__price
+            {
+            margin-right: 0.9rem ;
+            }
+      }
+}
+
+
+
