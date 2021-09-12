@@ -1,327 +1,652 @@
-//header//
+.page
+{
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  min-height: 100vh;
+ overflow: hidden;
+    position: relative;
+    .anim
+    {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: 3;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        animation-delay: 3s ;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
 
-  
-  .heading
-  {
-  
-    height: 12vh;
-    @include center;
-  z-index: 3;
-  position: sticky;
-  box-shadow: 0 6px 10px $colorC;
+        &__container
+        {
+            min-height: 100%;
+           width: 100%;
+            background-color: #353535;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+                svg
+                {
+                    height: 100px;
+                    width: 300px;
+                    animation: float 7s infinite;
     
-      &__anim--logo
-      {   width: 100%;
-          height: 3rem;
-          -webkit-animation-name: lightSpeedIn;
-          animation-name: lightSpeedIn;
-          -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-          -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-          -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-      }
-  }
+                    path
+                    {
+                        fill: $colorB;
+                        stroke:  $colorA;
+                    }
+        
+                }
+        }
+    }
+    .loader
+    {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 4rem;
+    transition: all 0.4s ease-out;
 
+        &__spinner
+        {
+            display: block;
+            position: relative;
+            top: 28%;
+            left: 8%;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top-color: #9356dc;
+            border-bottom-color: #9356dc;
+            animation: spin 5s linear infinite;
+        }
 
-  //section recherche de Restaurant//
-  .search__container 
-  {
-  height: 6rem;
-  background: $color-bg2;
-  @include center;
-  .search__map
-      {
-        padding: 0 1rem 0 0;
-      }
+        &__line:nth-child(1)
+        {
+            display: block;
+            position: relative;
+            top: 3%;
+            left: 3.4%;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top-color: #fff;
+            border-bottom-color: #fff;
+            animation: spin 3s linear infinite;
+            animation-delay: 0.666666668s;
+        }
 
-      .search input
-      {
-        width: 7rem;
-        border: none;
-        background: $color-bg2;
-        text-align: center;
-        font-weight: bold;
-      }
-    
-  }
+        &__line:nth-child(2)
+        {
+        display: block;
+        position: relative;
+        top: -66%;
+        left: 29%;
+        width: 170px;
+        height: 170px;
+        margin: -40px 0 0 -40px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #ff79da;
+        border-bottom-color: #ff79da;
+        animation: spin 4s linear infinite;
+        }
 
-  //section Entête +titre + descriptif//
-  .intro__container
-  {
-    
-      height: 35vh;
-      background-color: $color-bg1;
-      @include center;
-      .intro__block
-      {
-          text-align: center;
-          height: auto;
-          padding: 1rem;
-
-          .intro__title
+        &__line:nth-child(3)
           {
-              margin-bottom: 2.2rem;
+            display: block;
+            position: relative;
+            top: -145%;
+            left: 14%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top-color: #fff;
+            border-bottom-color: #fff;
+            animation: spin 1s linear infinite;
+            animation-delay: -0.666666668s;
           }
 
-              .intro__answer
-              {
-                  margin-bottom: 1rem;
-              }
-      }
+         &__line:nth-child(4)
+            {
+            display: block;
+            position: relative;
+            top: -214%;
+            left: 19%;
+            width: 130px;
+            height: 127.1px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top-color: #99e2d0;
+            border-bottom-color: #99e2d0;
+            animation: spin 2s linear infinite;
+            }
+        }
+
+
+        //header//
+.heading
+  {
+    height: 12vh;
+    @include center-item;
+  z-index: 3;
+ 
+  box-shadow: 0 6px 10px $colorC;
+
+  &__anim
+  {  
+      height: 3rem;
+      -webkit-animation-name: lightSpeedIn;
+      animation-name: lightSpeedIn;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
   }
 
-  //fonctionnement du site + navigation menu//
+}
 
-  .access__all
-  {
+//section recherche de Restaurant//
+
+.search
+{
+height: 6rem;
+background: $color-bg2;
+@include center;
+
+    &__map
+    {
+    padding: 0 1rem 0 0;
+    }
+
+    input
+    {
+    width: 7rem;
+    border: none;
+    background: $color-bg2;
+    font-weight: bold;
+    }
+}
+
+.intro
+{
+    height: 35vh;
+    background-color: $color-bg1;
+    @include center;
+    &__block
+    {
+        text-align: center;
+        height: auto;
+        padding: 1rem;
+
+        &__title, h2
+        {
+            
+        margin: 0 0 3rem 0; 
+            
+        }
+
+        &__answer, p
+        {
+        margin-bottom: 1rem;
+        }
+
+       .btn
+       {
+         @include btn;
+       }
+    }
+
+}
+
+.access
+{
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
+  
+       &__container
+       {
+           margin-top: 1rem;
+           width: 27%;
+       } 
 
-      .access__container
-      {
+       &__title
+       {
+           margin: 1rem 4rem 2rem;
+       }
+
+       .block
+       {
+        margin: 0 1rem 1rem 1rem;
         display: flex;
-        flex-wrap: wrap;
-        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 30rem;
+            &__tuto
+            {
+                padding: 1.4rem;
+                border-radius: 1rem;
+                background-color:$color-bg;
 
-          .access__fonctionnement
-          {
-            height: 38rem;
-            width: 23rem;
-            margin: 2rem 2rem 2rem 0;
-            
-
-              .card__container
-              {
-                height: 90%;
-                @include space-column-between;
-                margin: 2rem 0 0 0; 
-                .card__container, h2
+                box-shadow: 0 6px 10px $colorC;
+                transition: all 0.55s;
+                position: relative;
+                &:hover
                 {
-                width: 100%;
+                    background-color: lighten($color: $primary-color, $amount: 33%);
+                    transition-delay: 250ms ;
+                    color: $primary-color;
                 }
+            }
 
-                  .card__fonctionnement
-                  {   
-                    position: relative;
-                    box-shadow: 0 6px 10px $colorC;
-                    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
-                    font-weight: bold;
-                    transition: all 0.55s;
-                    width: 93%;
-                    height: 6em;
-                  
-
-                      .card__content
-                      {
-                        width: 77%;
-                        height: 100%;
-                        @include space-around;
-                        text-align: center;
-                        padding: 0 2rem 0 2rem;
-                        .card__content, h2
-                        {
-                            margin: 0 1rem 0 0;
-                        }
-                        .card__content, p
-                        {
-                          color: $colorD;
-                        }
-                      } 
-                  } 
-
-  .card__fonctionnement--light:hover
-  {
-   
-    background-color: lighten($color: $primary-color, $amount: 33%);
-    transition-delay: 250ms ;
-    color: $primary-color;
-  }
-
-
-  .card__fonctionnement--number1::before
-  {
-      content: '1';
-      position: absolute;
-      text-align: center;
-    @include center;
-      color: $colorB;
-      top: 35%;
-      left: -4%;
-      height: 2rem;
-      width: 2rem;
-      background: $primary-color;
-      border-radius: 1rem 1rem 1rem 1rem;
-  }
-  .card__fonctionnement--number2::before
-  {
-      content: '2';
-      position: absolute;
-      text-align: center;
-    @include center;
-      color: white;
-      top: 35%;
-      left: -4%;
-      height: 2rem;
-      width: 2rem;
-      background: $primary-color;
-      border-radius: 1rem 1rem 1rem 1rem;
-  }
-
-  .card__fonctionnement--number3::before
-  {
-      content: '3';
-      position: absolute;
-      text-align: center;
-    @include center;
-    color: $colorB;
-      top: 35%;
-      left: -4%;
-      height: 2rem;
-      width: 2rem;
-      background: $primary-color;
-      border-radius: 1rem 1rem 1rem 1rem;
-  }
-              }
-          }
-      } 
-  }
-
-          // A optimisez//
-
-
-
-
-  .access__restaurant
-  {
-      display: flex;
-      flex-grow: 2;
-      background: $color-bg1;
-      margin: 2rem 0 0 0;
-
-      .access__container__card
-      {
-        width: 100%;
-        .access__container__card, h2
-        {
-          margin: 2rem;
-        }
-      
-          .block__card
-          {   
-            @include space-around;
-            margin: 1rem 0 2rem 0;
-            
-              .card
-              {
-                width: 45%;
-                background-color: $colorB;
+            &__tuto--nb1::before
+            {
+                content: '1';
+                position: absolute;
+                @include center;
+                color: $colorB;
+                top: 32%;
+                left: -5%;
+                 padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+                background: $primary-color;
                 border-radius: 1rem 1rem 1rem 1rem;
-                cursor: pointer;
-              
-                
-                &__img, img
+            }
+     
+            &__tuto--nb2::before
+            {
+                content: '2';
+                position: absolute;
+                @include center;
+                color: $colorB;
+                top: 32%;
+                left: -5%;
+                 padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+                background: $primary-color;
+                border-radius: 1rem 1rem 1rem 1rem;
+            }
+     
+            &__tuto--nb3::before
+            {
+                content: '3';
+                position: absolute;
+                @include center;
+                color: $colorB;
+                top: 32%;
+                left: -5%;
+                 padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+                background: $primary-color;
+                border-radius: 1rem 1rem 1rem 1rem;
+            }
+            &__content
+            {
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                 span
+                 {
+                     padding: 0.5rem;
+                 }
+
+                 p
+                 {
+                    padding: 0.5rem;
+                    color:$colorD;
+                    font-weight: bold;
+                 }
+            }
+       }
+}
+
+.restaurant
+{
+    margin: 1rem 0 0rem;
+    background:$color-bg2;
+    width: 73%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+       &__title
+        {
+            margin: 1rem 3rem 0;
+        }
+}
+
+.container
+{
+    margin: 1rem;
+    width: 96.8%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+        .container__card
+        {
+            width: 50%;
+            .card
+            {
+                margin: 2rem 1rem 0 1rem;
+                background-color: $color-bg;
+                height: auto;
+                border-radius: 1rem;
+                box-shadow: 0 6px 10px $colorC;
+
+                &__img
                 {
-                    width: 100%;
-                    height: 10rem;
-                    border-radius: 1rem 1rem 0 0;
-                    object-fit: cover;
-                    position: relative;
+
                     
+                    img
+                    {
+                        object-fit: cover;
+                        height: 14rem;
+                        width: 100%;
+                        border-radius: 1rem 1rem 0 0;
+
+                    }
+
+                   
+                }
+                &__img--newscolor::before
+                {
+                    content: 'Nouveau';
+                    position: absolute;
+                    @include center;
+                    top: 43.3% ;
+                    right: 4%;
+                    height: 30px;
+                    width: 100px;
+                    background-color: $tertiary-color;
+                    color: darken($color:$tertiary-color, $amount: 40%);
+                    font-weight: bold;
                 }
 
-                  &__content
-                  {
+                &__img--newscolor2::before
+                {
+                    content: 'Nouveau';
+                    position: absolute;
+                    @include center;
+                    top: 43.3% ;
+                    right: 39%;
+                    height: 30px;
+                    width: 100px;
+                    background-color: $tertiary-color;
+                    color: darken($color:$tertiary-color, $amount: 40%);
+                    font-weight: bold;
+                }
+
+          
+
+                &__content
+                {
+                    
+                    padding: 1rem;
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-between;
-                    align-items: center;
-                    height: 7rem;
-                    margin: 0 1rem 0 1rem;
-                  } 
+                }
 
-                  &__content, p
-                  {
-                      padding: 0.5rem 0 0 0;
-
-                  }
-
-                  
-                  
-
-              }
-          }
-      }
-  }
-
-
-.card__new--newscolor::before
-{
-     content: 'Nouveau';
-     position: absolute;
-     @include center;
-     z-index: 3;
-     top: 15% ;
-     left: 75%;
-     height: 30px;
-     width: 100px;
-     background-color: $tertiary-color;
-     color: darken($color:$tertiary-color, $amount: 40%);
-     font-weight: bold;
+                &__title
+                {
+                    padding: 1rem 0;
+                    display: flex;
+                   justify-content: inherit;
+                   .heart
+                   {
+                       @include heart;
+              
+                    }
+                }
+            }
+        }
 }
 
 
 
-// footer du site//
-.foot__container
+
+.foot
 {
     width: 100%;
     height: 12rem;
-  
     background-color: $color-bg3;
     @include center-column;
-        .foot__title
+
+    &__title
+    {
+        
+        color: $color-bg;
+        margin: 1rem 0 1rem 1.6rem;
+         h3
+         {
+             font-family: 'Shrikhand', cursive;
+             font-weight: 100;
+         }
+    }
+
+    .link
+    {
+        &__block
         {
+            a
+            {
+                color: $color-bg;
+            }
+
             
-            color: $color-bg;
-            margin: 1rem 0 1rem 1.6rem;
         }
 
-        .foot__block
-        {
-            margin: 0 1rem 0 1rem;
-        }
-
-        .foot, a
-        {
-            color: $color-bg;
-          
-        }
-        .foot:nth-child(1)
+        &__block:nth-child(1)
         {
           padding: 0 0 0.7rem 0.7rem;
           color: $color-bg;
         }
 
-        .foot:nth-child(2)
+        &__block:nth-child(2)
         {
           padding: 0 0 0.7rem 0.7rem;
           color: $color-bg;
         }
 
-        .foot:nth-child(3)
+        &__block:nth-child(3)
         {
           padding: 0 0 0.7rem 0.7rem;
           color: $color-bg;
         }
 
-        .foot:nth-child(4)
+        &__block:nth-child(4)
         {
           padding: 0 0 1.7rem 0.7rem;
           color: $color-bg;
         }
+         
+    }
+
+}
 }
 
+@import"mediaquerie";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  

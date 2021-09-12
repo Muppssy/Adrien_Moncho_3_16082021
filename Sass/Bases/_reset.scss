@@ -3,64 +3,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    
 }
 
 html
 {
     font-size: 100%;
-    font-family: 'Roboto', sans-serif;
+    animation: scroll-bar 10s forwards;
+  
 }
 
 body
 {
+    font-family: 'roboto', sans-serif;
     margin: 0 auto;
     max-width: 1440px;
     width: 100%;
     min-height: 100vh;
-    animation: scroll-bar 10s forwards;
-  
-    
+}
+
+a
+{
+    text-decoration: none;
 }
 
 .fa-heart
 {
- font-size: 23px;
-}
-
-.fa-arrow-left
-{
-    font-size: 23px;
-    color: black;
+    font-size: 1.4em;
+    text-align: center;
 }
 
 
 
-h1
-{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shrikhand', cursive;
-}
-
-
-h2
-{
-    font-family: 'Roboto', sans-serif;
-}
-
-h3
-{
-    font-family: 'Roboto', sans-serif;
-}
-
-h4
-{
-    font-family: 'Shrikhand', cursive;
-}
-
-.menu__border h2
-{
-    border-bottom: 3px solid #99e2d0;
-}
-
+ 

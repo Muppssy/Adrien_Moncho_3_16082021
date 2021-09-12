@@ -1,0 +1,212 @@
+@media screen and (max-width: 1158px)
+{
+    .page .access
+    {
+        flex-direction: column;
+    }
+
+    .page .access__container
+    {
+        margin: 0 2rem 0 0;
+        width: 100%;
+    }
+
+    .page .access .block
+    {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .page .access .block .block__tuto
+    {
+        height: 12rem;
+        width: 19rem;
+    }
+
+    .page .access .block__tuto--nb1::before,
+    .page .access .block__tuto--nb2::before,
+    .page .access .block__tuto--nb3::before
+    {
+        top: -8%;
+        left: 43%;
+    }
+
+    .page .restaurant
+    {
+        margin: 1rem 0 0;
+        width: 100%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor::before
+    {
+        top: 51%;
+        right: 5%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 51%;
+        right: 53%;
+    }
+}
+
+@media screen and (max-width: 890px)
+{
+    
+    .page .access .block
+    {
+       flex-direction: column;
+       margin: 0 1rem 0 1rem;
+    }
+
+    .page .access .block .block__tuto
+    {
+        width: 100%;
+        height: 6rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .page .access .block__content
+    {
+        width: 50%;
+    }
+    
+    .page .access .block__tuto--nb1::before,
+    .page .access .block__tuto--nb2::before,
+    .page .access .block__tuto--nb3::before
+    {
+        top: 32%;
+        left: -2.4%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor::before
+    {
+        top: 55.3%;
+        right: 5%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 55.3%;
+        right: 53.4%;
+    }
+}
+
+@media screen and (max-width: 599px)
+{
+    .page .heading__anim 
+    {
+        height: 2.6rem;
+    }
+
+    .page .access .block__content
+    {
+        width: 100%;
+    }
+    .page .container 
+    {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .page .restaurant
+    {
+        width: 100%;
+    }
+
+    .page .container .container__card
+    {
+        width: 100%;
+        margin: 0 0 0 1rem;
+    }
+
+    .page .container .container__card:nth-child(2)
+    {
+        width: 100%;
+        margin-bottom: 4rem ;
+    }
+
+    .page .container .container__card .card
+    {
+        margin: 2rem 1rem 0 1rem;
+    }
+
+    .page .container .container__card .card__img img
+    {
+        height: 11rem;
+    }
+
+    .page .container .container__card .card .card__img--newscolor::before
+    {
+        top: 54.7%;
+        right: 7%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 42.3%;
+        right: 7.4%;
+    }
+
+   
+
+    
+
+    
+}
+
+@media screen and (max-width: 320px)
+{
+    .page .container .container__card .card .card__img--newscolor::before
+    {
+        top: 54.7%;
+        right: 10%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 42.3%;
+        right: 10.4%;
+    }
+
+}
+
+@media screen and (max-width: 1244px)
+{
+    .blocks
+    {
+        flex-direction: column;
+    }
+
+    .blocks .card
+    {
+        width: 96%;
+    }
+
+    .blocks .card__border h2
+    {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 680px)
+{
+    .blocks .card
+    {
+        margin: 0;
+    }
+
+    .blocks .card__dishes
+    {
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 444px)
+{
+    .blocks .card__dishes
+    {
+        margin: 2rem 0 2rem 0;
+    }
+}
+

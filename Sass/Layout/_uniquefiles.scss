@@ -1,77 +1,134 @@
+@import"../Utils/mixin";
+
+.heading
+  {
+    height: 12vh;
+    @include center;
+  z-index: 3;
+  box-shadow: 0 6px 10px $colorC;
 
 
-.pages__1
-{
-  height: 12vh;
-  width: 100%;
-   @include evenly;
+  &__return
+  {
+     
+      height: 100%;
+      width: 90%;
+      @include center-around;
+        .fa-arrow-left
+        {
+            color:$colorD;
+            font-size: 1.4em   
+        }
+  }
+
 }
-
-.background__pages > img
-{  
-  object-fit: cover;
+.background__pages
+{
+    img
+    {
+    object-fit: cover;
     height: 27rem;
-    position: relative;
     width: 100%;
+   
+    }
 }
 
 .menu
 {
- position: relative;
+    position: relative;
     background-color: $color-bg1;
     @include center_column1;
     flex-wrap: wrap;
     border-radius: 2rem 2rem 0 0;
     margin-top: -4rem;
+        &__title
+        {
+            padding: 2rem 2rem 2rem 2rem;
+            width: 100%;
+            @include between;
+           
 
-
-      .menu__title
-      {
-        padding: 2rem 2rem 2rem 2rem;
-        width: 100%;
-        @include between;
-      }
-
-      .menu__container
-      {
-        @include between1;
-        flex-wrap: wrap;
-        flex-grow: 2;
-        flex-shrink: 2;
-        width: 100%;
-          .menu__entree
+            h1
             {
-              margin: 1rem;
-              height: auto;
-              width: 31%;
+                font-family: 'Shrikhand', cursive;
+                font-weight: 200;
             }
-
-            .menu__border
+         .heart
             {
-              width: 30%;
+                @include heart;
+            }   
+        }
+}
+
+.blocks
+{
+  
+    width: 100%;
+    @include between1;
+    flex-wrap: wrap;
+
+    .card
+    {
+        margin: 1rem;
+        height: auto;
+  
+        width: 30%; /*mettre 100% dans le responsive*/
+      
+        &__border
+        {
+            width: 30%;
               text-transform: uppercase;
               padding: 2rem 0 0rem 0;
-            }
+         
+              h2
+              {
+                border-bottom: 3px solid $tertiary-color;
+              }
+        }
 
-            .menu__card-entree
-            {
-              margin: 2rem 0 3rem;
+        &__dishes
+        {
+           
+            margin: 2rem;
               box-shadow: 0 1px 6px;
               border-radius: 1rem;
               background-color: $colorB;
               display: flex;
               flex-direction: row-reverse;
               justify-content: flex-end;
-              overflow: hidden;
-              z-index: 9;
+             /* overflow: hidden;
+              z-index: 9;*/
               transform: translateY(999px);
               animation-name: fadeInUp;
               animation-duration: 1s;
               animation-fill-mode: both;
 
-                .menu__valid
+                &:hover > .card__valid
                 {
-                  padding: 1.6rem;
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                
+                &:hover > .card__valid, .card__price
+                {
+                   margin-left: 2rem ;
+                  
+                }
+
+                &:hover  .fa-check-circle
+                {
+                transform: rotate(0deg);
+                }
+
+           
+            
+        }
+
+        &__valid
+        {
+            padding: 1.6rem;
                   background: $tertiary-color;
                   color: $colorB;
                   border-radius: 0 1rem 1rem 0 ;
@@ -80,55 +137,75 @@
                   visibility: hidden;
                   transition:all 350ms ease-in-out;
                  @include center;
-                }
-                .menu__content
-                {
-                  
-                  display: flex;
-                  width: 100%;
-                    .menu__title-content
+
+                 .fa-check-circle
                     {
-                      margin: 1rem 1rem 0;
-                      width: 100%;
-                      white-space: nowrap;
-                      overflow: hidden;
-                      text-overflow: ellipsis;
-                      .menu__text
-                      {
-                        margin: 1rem 0;
-                        display: flex;
-                        justify-content: space-between;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                      }
-            
-                      .menu__line,p
-                      {
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                      }
-                   }
+                      transition-duration: 0.5s;
+                      transform: rotate(360deg);
+                    }
+
+                 
+        }
+
+        &__content
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+           
+            h3
+            {
+                margin: 1rem 0 1rem 1rem;
+                font-size: 1em ;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .text
+            {
+                margin: 1rem 1rem 0;
+                display: flex;
+                justify-content: space-between;
+           
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .text__line > p
+                {
+                    white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background-color: burlywood
+                
                 }
+
+                .text__price > p
+                {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    background-color: rgb(179, 125, 55)
+                }
+              
+
+              
+              
+
+               
             }
 
-
-
-
-            .menu__card-entree:hover > .menu__valid 
-            {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-            }
-            
-            .menu__card-entree:hover .menu__price
-            {
-            margin-right: 0.9rem ;
-            }
-      }
+          
+        }
+    }
 }
 
+.btn
+{
+    @include btn;
+    width: 16rem;
+    margin: 2rem 0 2rem 0;
+}
 
-
+@import"mediaquerie";
