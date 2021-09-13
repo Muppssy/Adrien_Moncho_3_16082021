@@ -41,13 +41,13 @@
     flex-wrap: wrap;
     border-radius: 2rem 2rem 0 0;
     margin-top: -4rem;
+
         &__title
         {
             padding: 2rem 2rem 2rem 2rem;
             width: 100%;
             @include between;
            
-
             h1
             {
                 font-family: 'Shrikhand', cursive;
@@ -71,7 +71,6 @@
     {
         margin: 1rem;
         height: auto;
-  
         width: 30%; 
       
         &__border
@@ -121,9 +120,6 @@
                 {
                 transform: rotate(0deg);
                 }
-
-           
-            
         }
 
         &__valid
@@ -143,8 +139,6 @@
                       transition-duration: 0.5s;
                       transform: rotate(360deg);
                     }
-
-                 
         }
 
         &__content
@@ -167,18 +161,16 @@
                 margin: 1rem 1rem 0;
                 display: flex;
                 justify-content: space-between;
-           
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
 
                 .text__line > p
                 {
-                    white-space: nowrap;
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 background-color: burlywood
-                
                 }
 
                 .text__price > p
@@ -188,15 +180,7 @@
                     text-overflow: ellipsis;
                     background-color: rgb(179, 125, 55)
                 }
-              
-
-              
-              
-
-               
             }
-
-          
         }
     }
 }
@@ -235,8 +219,6 @@
             {
                 color: $color-bg;
             }
-
-            
         }
 
         &__block:nth-child(1)
@@ -261,10 +243,8 @@
         {
           padding: 0 0 1.7rem 0.7rem;
           color: $color-bg;
-        }
-         
+        }   
     }
-
 }
 
 @import"mediaquerie";
