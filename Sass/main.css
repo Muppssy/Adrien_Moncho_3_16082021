@@ -829,7 +829,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: burlywood;
 }
 
 .btn {
