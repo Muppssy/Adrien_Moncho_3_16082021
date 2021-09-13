@@ -87,6 +87,9 @@ a {
   width: 210px;
   height: 210px;
   border-radius: 50%;
+  border-style: dotted;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   border: 4px solid transparent;
   border-top-color: #9356dc;
   border-bottom-color: #9356dc;
@@ -96,63 +99,61 @@ a {
 .page .loader__line:nth-child(1) {
   display: block;
   position: relative;
-  top: 3%;
-  left: 3.4%;
-  width: 190px;
-  height: 190px;
+  top: 5%;
+  left: 5.4%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 5px solid transparent;
   border-top-color: #fff;
   border-bottom-color: #fff;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-  -webkit-animation-delay: 0.666666668s;
-          animation-delay: 0.666666668s;
+  -webkit-animation: spin 2.5s linear infinite;
+          animation: spin 2.5s linear infinite;
 }
 .page .loader__line:nth-child(2) {
   display: block;
   position: relative;
-  top: -66%;
-  left: 29%;
-  width: 170px;
-  height: 170px;
+  top: -57%;
+  left: 33%;
+  width: 150px;
+  height: 149px;
   margin: -40px 0 0 -40px;
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
   -webkit-animation: spin 4s linear infinite;
-          animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
 .page .loader__line:nth-child(3) {
   display: block;
   position: relative;
-  top: -145%;
-  left: 14%;
-  width: 150px;
-  height: 150px;
+  top: -125%;
+  left: 19.5%;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
-  border: 5px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-style: dashed;
+  border-width: 5px;
+  border-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  border-top-color: #99E2D0;
   -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-  -webkit-animation-delay: -0.666666668s;
-          animation-delay: -0.666666668s;
+  animation: spin 3s linear infinite;
 }
 .page .loader__line:nth-child(4) {
   display: block;
   position: relative;
-  top: -214%;
-  left: 19%;
-  width: 130px;
-  height: 127.1px;
+  top: -180%;
+  left: 26%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 5px solid transparent;
   border-top-color: #99e2d0;
   border-bottom-color: #99e2d0;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 .page .heading {
   height: 12vh;
@@ -225,9 +226,10 @@ a {
 }
 .page .intro__block .btn:hover {
   transform: scale(0.92);
-  transition-delay: 250ms;
+  transition-delay: 230ms;
   box-shadow: 0 6px 10px #0000004b;
-  opacity: 0.79;
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
 }
 .page .intro__block .btn a {
   color: white;
@@ -351,7 +353,7 @@ a {
 .page .container__card .card__img img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 14rem;
+  height: 10rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
 }
@@ -361,7 +363,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 43.3%;
+  top: 46.3%;
   right: 4%;
   height: 30px;
   width: 100px;
@@ -375,7 +377,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 43.3%;
+  top: 46.3%;
   right: 39%;
   height: 30px;
   width: 100px;
@@ -478,6 +480,19 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1244px) {
+  .blocks {
+    flex-direction: column;
+  }
+
+  .blocks .card {
+    width: 96%;
+  }
+
+  .blocks .card__border h2 {
+    width: 35%;
+  }
+}
 @media screen and (max-width: 1158px) {
   .page .access {
     flex-direction: column;
@@ -511,12 +526,12 @@ a {
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
-    top: 51%;
+    top: 55%;
     right: 5%;
   }
 
   .page .container .container__card .card .card__img--newscolor2::before {
-    top: 51%;
+    top: 55%;
     right: 53%;
   }
 }
@@ -544,12 +559,12 @@ a {
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
-    top: 55.3%;
+    top: 59.3%;
     right: 5%;
   }
 
   .page .container .container__card .card .card__img--newscolor2::before {
-    top: 55.3%;
+    top: 59.3%;
     right: 53.4%;
   }
 }
@@ -599,42 +614,32 @@ a {
     right: 7.4%;
   }
 }
-@media screen and (max-width: 320px) {
-  .page .container .container__card .card .card__img--newscolor::before {
-    top: 54.7%;
-    right: 10%;
-  }
-
-  .page .container .container__card .card .card__img--newscolor2::before {
-    top: 42.3%;
-    right: 10.4%;
-  }
-}
-@media screen and (max-width: 1244px) {
-  .blocks {
-    flex-direction: column;
-  }
-
-  .blocks .card {
-    width: 96%;
-  }
-
-  .blocks .card__border h2 {
-    width: 35%;
-  }
-}
 @media screen and (max-width: 680px) {
   .blocks .card {
     margin: 0;
   }
 
   .blocks .card__dishes {
-    margin: 2rem;
+    margin: 2rem 0.7rem 2rem 0.9rem;
   }
 }
-@media screen and (max-width: 444px) {
-  .blocks .card__dishes {
-    margin: 2rem 0 2rem 0;
+@media screen and (max-width: 320px) {
+  .page .container .container__card .card .card__img--newscolor::before {
+    top: 56.2%;
+    right: 10%;
+  }
+
+  .page .container .container__card .card .card__img--newscolor2::before {
+    top: 44.5%;
+    right: 10.4%;
+  }
+
+  .page .container .container__card .card__img img {
+    height: 9rem;
+  }
+
+  .blocks .card__border {
+    width: 67%;
   }
 }
 .heading {
@@ -739,7 +744,6 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 .blocks .card {
@@ -748,9 +752,9 @@ a {
   width: 30%;
 }
 .blocks .card__border {
-  width: 30%;
+  width: 80%;
   text-transform: uppercase;
-  padding: 2rem 0 0rem 0;
+  padding: 2rem 0 0rem 2rem;
 }
 .blocks .card__border h2 {
   border-bottom: 3px solid #99E2D0;
@@ -805,6 +809,9 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .blocks .card__content h3 {
   margin: 1rem 0 1rem 1rem;
@@ -817,21 +824,12 @@ a {
   margin: 1rem 1rem 0;
   display: flex;
   justify-content: space-between;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.blocks .card__content .text .text__line > p {
+.blocks .card__content .text .text__line, .blocks .card__content .text p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: burlywood;
-}
-.blocks .card__content .text .text__price > p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  background-color: #b37d37;
 }
 
 .btn {
@@ -852,9 +850,10 @@ a {
 }
 .btn:hover {
   transform: scale(0.92);
-  transition-delay: 250ms;
+  transition-delay: 230ms;
   box-shadow: 0 6px 10px #0000004b;
-  opacity: 0.79;
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
 }
 .btn a {
   color: white;
@@ -896,6 +895,19 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1244px) {
+  .blocks {
+    flex-direction: column;
+  }
+
+  .blocks .card {
+    width: 96%;
+  }
+
+  .blocks .card__border h2 {
+    width: 35%;
+  }
+}
 @media screen and (max-width: 1158px) {
   .page .access {
     flex-direction: column;
@@ -929,12 +941,12 @@ a {
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
-    top: 51%;
+    top: 55%;
     right: 5%;
   }
 
   .page .container .container__card .card .card__img--newscolor2::before {
-    top: 51%;
+    top: 55%;
     right: 53%;
   }
 }
@@ -962,12 +974,12 @@ a {
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
-    top: 55.3%;
+    top: 59.3%;
     right: 5%;
   }
 
   .page .container .container__card .card .card__img--newscolor2::before {
-    top: 55.3%;
+    top: 59.3%;
     right: 53.4%;
   }
 }
@@ -1017,42 +1029,32 @@ a {
     right: 7.4%;
   }
 }
-@media screen and (max-width: 320px) {
-  .page .container .container__card .card .card__img--newscolor::before {
-    top: 54.7%;
-    right: 10%;
-  }
-
-  .page .container .container__card .card .card__img--newscolor2::before {
-    top: 42.3%;
-    right: 10.4%;
-  }
-}
-@media screen and (max-width: 1244px) {
-  .blocks {
-    flex-direction: column;
-  }
-
-  .blocks .card {
-    width: 96%;
-  }
-
-  .blocks .card__border h2 {
-    width: 35%;
-  }
-}
 @media screen and (max-width: 680px) {
   .blocks .card {
     margin: 0;
   }
 
   .blocks .card__dishes {
-    margin: 2rem;
+    margin: 2rem 0.7rem 2rem 0.9rem;
   }
 }
-@media screen and (max-width: 444px) {
-  .blocks .card__dishes {
-    margin: 2rem 0 2rem 0;
+@media screen and (max-width: 320px) {
+  .page .container .container__card .card .card__img--newscolor::before {
+    top: 56.2%;
+    right: 10%;
+  }
+
+  .page .container .container__card .card .card__img--newscolor2::before {
+    top: 44.5%;
+    right: 10.4%;
+  }
+
+  .page .container .container__card .card__img img {
+    height: 9rem;
+  }
+
+  .blocks .card__border {
+    width: 67%;
   }
 }
 @-webkit-keyframes scroll-bar {
@@ -1256,46 +1258,46 @@ a {
 }
 
 .card1--delay5 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.card1--delay8 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.card1--delay2 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.card1--delay6 {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
-.card1--delay9 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.card1--delay3 {
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
-}
-
-.card1--delay7 {
+.card1--delay8 {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
 
-.card1--delay10 {
+.card1--delay2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.card1--delay6 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.card1--delay9 {
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
 }
 
-.card1--delay4 {
+.card1--delay3 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.card1--delay7 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.card1--delay10 {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
+}
+
+.card1--delay4 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }/*# sourceMappingURL=main.css.map */

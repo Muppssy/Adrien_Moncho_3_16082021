@@ -64,7 +64,7 @@
 {
   
     width: 100%;
-    @include between1;
+    @include between2;
     flex-wrap: wrap;
 
     .card
@@ -75,9 +75,9 @@
       
         &__border
         {
-            width: 30%;
+            width: 80%;
               text-transform: uppercase;
-              padding: 2rem 0 0rem 0;
+              padding: 2rem 0 0rem 2rem;
          
               h2
               {
@@ -146,6 +146,9 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
            
             h3
             {
@@ -161,24 +164,14 @@
                 margin: 1rem 1rem 0;
                 display: flex;
                 justify-content: space-between;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                .text__line > p
+              
+               
+                .text__line, p
                 {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 background-color: burlywood
-                }
-
-                .text__price > p
-                {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    background-color: rgb(179, 125, 55)
                 }
             }
         }

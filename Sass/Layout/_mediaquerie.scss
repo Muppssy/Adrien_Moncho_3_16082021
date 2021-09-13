@@ -1,3 +1,22 @@
+@media screen and (max-width: 1244px)
+{
+    .blocks
+    {
+        flex-direction: column;
+    }
+
+    .blocks .card
+    {
+        width: 96%;
+    }
+
+    .blocks .card__border h2
+    {
+        width: 35%;
+    }
+}
+
+
 @media screen and (max-width: 1158px)
 {
     .page .access
@@ -39,13 +58,13 @@
 
     .page .container .container__card .card .card__img--newscolor::before
     {
-        top: 51%;
+        top: 55%;
         right: 5%;
     }
 
     .page .container .container__card .card .card__img--newscolor2::before
     {
-        top: 51%;
+        top: 55%;
         right: 53%;
     }
 }
@@ -81,13 +100,13 @@
 
     .page .container .container__card .card .card__img--newscolor::before
     {
-        top: 55.3%;
+        top: 59.3%;
         right: 5%;
     }
 
     .page .container .container__card .card .card__img--newscolor2::before
     {
-        top: 55.3%;
+        top: 59.3%;
         right: 53.4%;
     }
 }
@@ -147,46 +166,6 @@
         top: 42.3%;
         right: 7.4%;
     }
-
-   
-
-    
-
-    
-}
-
-@media screen and (max-width: 320px)
-{
-    .page .container .container__card .card .card__img--newscolor::before
-    {
-        top: 54.7%;
-        right: 10%;
-    }
-
-    .page .container .container__card .card .card__img--newscolor2::before
-    {
-        top: 42.3%;
-        right: 10.4%;
-    }
-
-}
-
-@media screen and (max-width: 1244px)
-{
-    .blocks
-    {
-        flex-direction: column;
-    }
-
-    .blocks .card
-    {
-        width: 96%;
-    }
-
-    .blocks .card__border h2
-    {
-        width: 35%;
-    }
 }
 
 @media screen and (max-width: 680px)
@@ -198,15 +177,42 @@
 
     .blocks .card__dishes
     {
-        margin: 2rem;
+        margin: 2rem 0.7rem 2rem 0.9rem;
     }
 }
 
-@media screen and (max-width: 444px)
+@media screen and (max-width: 320px)
 {
-    .blocks .card__dishes
+    .page .container .container__card .card .card__img--newscolor::before
     {
-        margin: 2rem 0 2rem 0;
+        top: 56.2%;
+        right: 10%;
     }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 44.5%;
+        right: 10.4%;
+    }
+
+    .page .container .container__card .card__img img
+    {
+        height: 9rem;
+    }
+
+    .blocks .card__border
+     {
+        width: 67%;
+    }
+
+   
+
+   
+
 }
+
+
+
+
+
 
