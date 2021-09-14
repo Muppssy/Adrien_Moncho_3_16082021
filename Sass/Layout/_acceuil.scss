@@ -34,14 +34,8 @@
                 svg
                 {
                     height: 100px;
-                    width: 300px;
+                    width: 255px;
                     animation: float 7s infinite;
-    
-                    path
-                    {
-                        fill: $colorB;
-                        stroke:  $colorA;
-                    }
                 }
         }
     }
@@ -345,13 +339,14 @@ background: $color-bg2;
     height: 100%;
     display: flex;
     align-items: center;
+    
         &__card
         {
             width: 50%;
            
             .card
             {
-                margin: 2rem 1rem 0 1rem;
+                margin: 1rem 1rem 2rem 1rem;
                 background-color: $color-bg;
                 height: auto;
                 border-radius: 1rem;
@@ -367,6 +362,7 @@ background: $color-bg2;
                         height: 10rem;
                         width: 100%;
                         border-radius: 1rem 1rem 0 0;
+                        position: relative;
 
                     }
 
@@ -377,10 +373,11 @@ background: $color-bg2;
                     content: 'Nouveau';
                     position: absolute;
                     @include center;
-                    top: 46.3% ;
+                    top: 45.9% ;
                     right: 4%;
                     height: 30px;
                     width: 100px;
+                    z-index: 2;
                     background-color: $tertiary-color;
                     color: darken($color:$tertiary-color, $amount: 40%);
                     font-weight: bold;
@@ -391,10 +388,11 @@ background: $color-bg2;
                     content: 'Nouveau';
                     position: absolute;
                     @include center;
-                    top: 46.3% ;
-                    right: 39%;
+                    top: 45.9% ;
+                    right: 39.1%;
                     height: 30px;
                     width: 100px;
+                    z-index: 2;
                     background-color: $tertiary-color;
                     color: darken($color:$tertiary-color, $amount: 40%);
                     font-weight: bold;
@@ -435,11 +433,12 @@ background: $color-bg2;
     height: 12rem;
     background-color: $color-bg3;
     @include center-column;
+    padding: 0 1rem 0 1rem;
 
     &__title
     {
         color: $color-bg;
-        margin: 1rem 0 1rem 1.6rem;
+        margin: 1rem 0 1rem 0.6rem;
          h3
          {
              font-family: 'Shrikhand', cursive;

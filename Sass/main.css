@@ -6,8 +6,6 @@
 
 html {
   font-size: 100%;
-  -webkit-animation: scroll-bar 10s forwards;
-          animation: scroll-bar 10s forwards;
 }
 
 body {
@@ -25,6 +23,15 @@ a {
 .fa-heart {
   font-size: 1.4em;
   text-align: center;
+}
+
+.fa-check-circle {
+  font-size: 1.2rem;
+}
+
+.fa-utensils, .fa-hands-helping {
+  padding: 0 1rem 0 0;
+  text-align: justify;
 }
 
 .page {
@@ -65,13 +72,9 @@ a {
 }
 .page .anim__container svg {
   height: 100px;
-  width: 300px;
+  width: 255px;
   -webkit-animation: float 7s infinite;
           animation: float 7s infinite;
-}
-.page .anim__container svg path {
-  fill: #fff;
-  stroke: #2e2c2c;
 }
 .page .loader {
   height: 250px;
@@ -221,6 +224,7 @@ a {
   border-radius: 2rem;
   background: linear-gradient(175deg, #ff79da 10%, #9356dc 90%);
   transition: box-shadow 150ms linear, transform 150ms linear;
+  transition: all 0.75s;
   opacity: 1;
   box-shadow: 0 6px 10px #0000004b;
 }
@@ -344,7 +348,7 @@ a {
   width: 50%;
 }
 .page .container__card .card {
-  margin: 2rem 1rem 0 1rem;
+  margin: 1rem 1rem 2rem 1rem;
   background-color: #fff;
   height: auto;
   border-radius: 1rem;
@@ -356,6 +360,7 @@ a {
   height: 10rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+  position: relative;
 }
 .page .container__card .card__img--newscolor::before {
   content: "Nouveau";
@@ -363,10 +368,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 46.3%;
+  top: 45.9%;
   right: 4%;
   height: 30px;
   width: 100px;
+  z-index: 2;
   background-color: #99E2D0;
   color: #278870;
   font-weight: bold;
@@ -377,10 +383,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 46.3%;
-  right: 39%;
+  top: 45.9%;
+  right: 39.1%;
   height: 30px;
   width: 100px;
+  z-index: 2;
   background-color: #99E2D0;
   color: #278870;
   font-weight: bold;
@@ -451,10 +458,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 1rem 0 1rem;
 }
 .page .foot__title {
   color: #fff;
-  margin: 1rem 0 1rem 1.6rem;
+  margin: 1rem 0 1rem 0.6rem;
 }
 .page .foot__title h3 {
   font-family: "Shrikhand", cursive;
@@ -480,6 +488,17 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1880px) {
+  .page .container .container__card .card .card__img--newscolor::before {
+    top: 46%;
+    right: 3.8%;
+  }
+
+  .page .container .container__card .card .card__img--newscolor2::before {
+    top: 46%;
+    right: 39%;
+  }
+}
 @media screen and (max-width: 1244px) {
   .blocks {
     flex-direction: column;
@@ -511,6 +530,7 @@ a {
   .page .access .block .block__tuto {
     height: 12rem;
     width: 19rem;
+    margin: 0 1rem 0 1rem;
   }
 
   .page .access .block__tuto--nb1::before,
@@ -555,7 +575,8 @@ a {
 .page .access .block__tuto--nb2::before,
 .page .access .block__tuto--nb3::before {
     top: 32%;
-    left: -2.4%;
+    left: -1.4%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
@@ -622,6 +643,14 @@ a {
   .blocks .card__dishes {
     margin: 2rem 0.7rem 2rem 0.9rem;
   }
+
+  .page .access .block__tuto--nb1::before,
+.page .access .block__tuto--nb2::before,
+.page .access .block__tuto--nb3::before {
+    top: 32%;
+    left: -2.1%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
 }
 @media screen and (max-width: 320px) {
   .page .container .container__card .card .card__img--newscolor::before {
@@ -641,6 +670,14 @@ a {
   .blocks .card__border {
     width: 67%;
   }
+
+  .page .access .block__tuto--nb1::before,
+.page .access .block__tuto--nb2::before,
+.page .access .block__tuto--nb3::before {
+    top: 32%;
+    left: -4.1%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
 }
 .heading {
   height: 12vh;
@@ -656,6 +693,9 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.heading__return img {
+  padding: 0 2rem 0 0;
 }
 .heading__return .fa-arrow-left {
   color: #000;
@@ -690,6 +730,7 @@ a {
 .menu__title h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 200;
+  padding: 0 0 0 1rem;
 }
 .menu__title .heart {
   display: flex;
@@ -758,6 +799,8 @@ a {
 }
 .blocks .card__border h2 {
   border-bottom: 3px solid #99E2D0;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 .blocks .card__dishes {
   margin: 2rem;
@@ -802,7 +845,7 @@ a {
   align-items: center;
 }
 .blocks .card__valid .fa-check-circle {
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   transform: rotate(360deg);
 }
 .blocks .card__content {
@@ -842,6 +885,7 @@ a {
   border-radius: 2rem;
   background: linear-gradient(175deg, #ff79da 10%, #9356dc 90%);
   transition: box-shadow 150ms linear, transform 150ms linear;
+  transition: all 0.75s;
   opacity: 1;
   box-shadow: 0 6px 10px #0000004b;
   width: 16rem;
@@ -894,6 +938,17 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1880px) {
+  .page .container .container__card .card .card__img--newscolor::before {
+    top: 46%;
+    right: 3.8%;
+  }
+
+  .page .container .container__card .card .card__img--newscolor2::before {
+    top: 46%;
+    right: 39%;
+  }
+}
 @media screen and (max-width: 1244px) {
   .blocks {
     flex-direction: column;
@@ -925,6 +980,7 @@ a {
   .page .access .block .block__tuto {
     height: 12rem;
     width: 19rem;
+    margin: 0 1rem 0 1rem;
   }
 
   .page .access .block__tuto--nb1::before,
@@ -969,7 +1025,8 @@ a {
 .page .access .block__tuto--nb2::before,
 .page .access .block__tuto--nb3::before {
     top: 32%;
-    left: -2.4%;
+    left: -1.4%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
 
   .page .container .container__card .card .card__img--newscolor::before {
@@ -1036,6 +1093,14 @@ a {
   .blocks .card__dishes {
     margin: 2rem 0.7rem 2rem 0.9rem;
   }
+
+  .page .access .block__tuto--nb1::before,
+.page .access .block__tuto--nb2::before,
+.page .access .block__tuto--nb3::before {
+    top: 32%;
+    left: -2.1%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
 }
 @media screen and (max-width: 320px) {
   .page .container .container__card .card .card__img--newscolor::before {
@@ -1055,21 +1120,13 @@ a {
   .blocks .card__border {
     width: 67%;
   }
-}
-@-webkit-keyframes scroll-bar {
-  0% {
-    overflow-y: hidden;
-  }
-  100% {
-    overflow-y: scroll;
-  }
-}
-@keyframes scroll-bar {
-  0% {
-    overflow-y: hidden;
-  }
-  100% {
-    overflow-y: scroll;
+
+  .page .access .block__tuto--nb1::before,
+.page .access .block__tuto--nb2::before,
+.page .access .block__tuto--nb3::before {
+    top: 32%;
+    left: -4.1%;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
 }
 @-webkit-keyframes float {
@@ -1207,8 +1264,8 @@ a {
   }
 }
 .card--delay1 {
-  -webkit-animation-delay: 0, 125s;
-          animation-delay: 0, 125s;
+  -webkit-animation-delay: 0.125s;
+          animation-delay: 0.125s;
 }
 
 .card--delay4 {
@@ -1252,8 +1309,8 @@ a {
 }
 
 .card1--delay1 {
-  -webkit-animation-delay: 0, 5s;
-          animation-delay: 0, 5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .card1--delay5 {

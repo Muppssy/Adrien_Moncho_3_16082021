@@ -1,3 +1,18 @@
+@media screen and (max-width: 1880px)
+{
+    .page .container .container__card .card .card__img--newscolor::before
+    {
+        top: 46%;
+        right: 3.8%;
+    }
+
+    .page .container .container__card .card .card__img--newscolor2::before
+    {
+        top: 46%;
+        right: 39%;
+    }
+}
+
 @media screen and (max-width: 1244px)
 {
     .blocks
@@ -40,6 +55,7 @@
     {
         height: 12rem;
         width: 19rem;
+        margin: 0 1rem 0 1rem;
     }
 
     .page .access .block__tuto--nb1::before,
@@ -95,7 +111,8 @@
     .page .access .block__tuto--nb3::before
     {
         top: 32%;
-        left: -2.4%;
+        left: -1.4%;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     }
 
     .page .container .container__card .card .card__img--newscolor::before
@@ -179,6 +196,15 @@
     {
         margin: 2rem 0.7rem 2rem 0.9rem;
     }
+
+    .page .access .block__tuto--nb1::before, 
+    .page .access .block__tuto--nb2::before, 
+    .page .access .block__tuto--nb3::before
+    {
+        top: 32%;
+        left: -2.1%;
+         padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    }
 }
 
 @media screen and (max-width: 320px)
@@ -205,14 +231,15 @@
         width: 67%;
     }
 
-   
+    .page .access .block__tuto--nb1::before, 
+    .page .access .block__tuto--nb2::before, 
+    .page .access .block__tuto--nb3::before
+    {
+        top: 32%;
+        left: -4.1%;
+         padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    }
 
    
-
 }
-
-
-
-
-
 
