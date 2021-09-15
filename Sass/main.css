@@ -50,8 +50,8 @@ a {
   position: absolute;
   display: flex;
   justify-content: center;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
   -webkit-animation-duration: 1s;
@@ -63,11 +63,11 @@ a {
   min-height: 100%;
   width: 100%;
   background-color: #353535;
-  opacity: 1;
+  opacity: 0.7;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: fixed;
 }
 .page .anim__container svg {
@@ -75,6 +75,7 @@ a {
   width: 255px;
   -webkit-animation: float 7s infinite;
           animation: float 7s infinite;
+  margin-bottom: 2rem;
 }
 .page .loader {
   height: 250px;
@@ -169,15 +170,15 @@ a {
 .page .heading__anim {
   height: 3rem;
   -webkit-animation-name: lightSpeedIn;
-  animation-name: lightSpeedIn;
+          animation-name: lightSpeedIn;
   -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-fill-mode: both;
   -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+          animation-delay: 4s;
 }
 .page .search {
   height: 6rem;
@@ -652,6 +653,12 @@ a {
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .menu__title {
+    padding: 2rem 1rem 0 0;
+    font-size: 0.8em;
+  }
+}
 @media screen and (max-width: 320px) {
   .page .container .container__card .card .card__img--newscolor::before {
     top: 56.2%;
@@ -668,7 +675,13 @@ a {
   }
 
   .blocks .card__border {
-    width: 67%;
+    width: 50%;
+    padding: 1rem 0 0 1rem;
+  }
+
+  .menu__title {
+    padding: 2rem 1rem 0 0;
+    font-size: 0.8em;
   }
 
   .page .access .block__tuto--nb1::before,
@@ -677,6 +690,10 @@ a {
     top: 32%;
     left: -4.1%;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
+
+  .foot__title {
+    margin: 1rem 0 1rem 0.7rem;
   }
 }
 .heading {
@@ -721,7 +738,7 @@ a {
   margin-top: -4rem;
 }
 .menu__title {
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 0 2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -857,16 +874,17 @@ a {
   text-overflow: ellipsis;
 }
 .blocks .card__content h3 {
-  margin: 1rem 0 1rem 1rem;
+  margin: 1rem 0 0 1rem;
   font-size: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .blocks .card__content .text {
-  margin: 1rem 1rem 0;
+  margin: 0rem 1rem;
   display: flex;
   justify-content: space-between;
+  line-height: 2.2rem;
 }
 .blocks .card__content .text .text__line, .blocks .card__content .text p {
   white-space: nowrap;
@@ -912,7 +930,7 @@ a {
 }
 .foot__title {
   color: #fff;
-  margin: 1rem 0 1rem 1.6rem;
+  margin: 1rem 0 1rem 0.7rem;
 }
 .foot__title h3 {
   font-family: "Shrikhand", cursive;
@@ -1102,6 +1120,12 @@ a {
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   }
 }
+@media screen and (max-width: 425px) {
+  .menu__title {
+    padding: 2rem 1rem 0 0;
+    font-size: 0.8em;
+  }
+}
 @media screen and (max-width: 320px) {
   .page .container .container__card .card .card__img--newscolor::before {
     top: 56.2%;
@@ -1118,7 +1142,13 @@ a {
   }
 
   .blocks .card__border {
-    width: 67%;
+    width: 50%;
+    padding: 1rem 0 0 1rem;
+  }
+
+  .menu__title {
+    padding: 2rem 1rem 0 0;
+    font-size: 0.8em;
   }
 
   .page .access .block__tuto--nb1::before,
@@ -1127,6 +1157,10 @@ a {
     top: 32%;
     left: -4.1%;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  }
+
+  .foot__title {
+    margin: 1rem 0 1rem 0.7rem;
   }
 }
 @-webkit-keyframes float {
@@ -1191,7 +1225,7 @@ a {
 }
 @-webkit-keyframes lightSpeedIn {
   0% {
-    transform: translate3d(-100%, 0, 0) skewX(-30deg);
+    transform: translate3d(-100%, 0, 0) skewX(-50deg);
     opacity: 0;
   }
   60% {
@@ -1209,7 +1243,7 @@ a {
 }
 @keyframes lightSpeedIn {
   0% {
-    transform: translate3d(-100%, 0, 0) skewX(-30deg);
+    transform: translate3d(-100%, 0, 0) skewX(-50deg);
     opacity: 0;
   }
   60% {

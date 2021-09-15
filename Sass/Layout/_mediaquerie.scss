@@ -207,6 +207,17 @@
     }
 }
 
+@media screen and (max-width: 425px)
+{
+    .menu__title
+    {
+        padding: 2rem 1rem 0 0;
+        font-size: 0.8em;
+    }
+
+}
+
+
 @media screen and (max-width: 320px)
 {
     .page .container .container__card .card .card__img--newscolor::before
@@ -228,8 +239,17 @@
 
     .blocks .card__border
      {
-        width: 67%;
+        width: 50%;
+        padding: 1rem 0 0 1rem;
     }
+
+    .menu__title
+    {
+        padding: 2rem 1rem 0 0;
+        font-size: 0.8em;
+    }
+
+    
 
     .page .access .block__tuto--nb1::before, 
     .page .access .block__tuto--nb2::before, 
@@ -238,6 +258,11 @@
         top: 32%;
         left: -4.1%;
          padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    }
+
+    .foot__title
+    {
+        margin: 1rem 0 1rem 0.7rem;
     }
 
    

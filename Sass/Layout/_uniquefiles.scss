@@ -7,7 +7,6 @@
   z-index: 3;
   box-shadow: 0 6px 10px $colorC;
 
-
   &__return
   {
      
@@ -50,7 +49,7 @@
 
         &__title
         {
-            padding: 2rem 2rem 2rem 2rem;
+            padding: 2rem 2rem 0 2rem;
             width: 100%;
             @include between;
            
@@ -96,14 +95,11 @@
 
         &__dishes
         {
-           
-            margin: 2rem;
+              margin: 2rem;
               box-shadow: 0 1px 6px;
               border-radius: 1rem;
               background-color: $colorB;
-              display: flex;
-              flex-direction: row-reverse;
-              justify-content: flex-end;
+             @include row-reverse;
               overflow: hidden;
               z-index: 9;
               transform: translateY(999px);
@@ -122,7 +118,6 @@
                 &:hover > .card__valid, .card__price
                 {
                    margin-left: 2rem ;
-                  
                 }
 
                 &:hover  .fa-check-circle
@@ -134,14 +129,14 @@
         &__valid
         {
             padding: 1.6rem;
-                  background: $tertiary-color;
-                  color: $colorB;
-                  border-radius: 0 1rem 1rem 0 ;
-                  transform: translate(75px);
-                  overflow: hidden;
-                  visibility: hidden;
-                  transition:all 350ms ease-in-out;
-                 @include center;
+            background: $tertiary-color;
+            color: $colorB;
+            border-radius: 0 1rem 1rem 0 ;
+            transform: translate(75px);
+            overflow: hidden;
+            visibility: hidden;
+            transition:all 350ms ease-in-out;
+             @include center;
 
                  .fa-check-circle
                     {
@@ -161,7 +156,7 @@
            
             h3
             {
-                margin: 1rem 0 1rem 1rem;
+                margin: 1rem 0 0 1rem;
                 font-size: 1em ;
                 white-space: nowrap;
                 overflow: hidden;
@@ -170,9 +165,10 @@
 
             .text
             {
-                margin: 1rem 1rem 0;
+                margin: 0rem 1rem ;
                 display: flex;
                 justify-content: space-between;
+                line-height: 2.2rem;
               
                
                 .text__line, p
@@ -180,7 +176,6 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-              
                 }
             }
         }
@@ -205,7 +200,7 @@
     {
         
         color: $color-bg;
-        margin: 1rem 0 1rem 1.6rem;
+        margin: 1rem 0 1rem 0.7rem;
          h3
          {
              font-family: 'Shrikhand', cursive;
