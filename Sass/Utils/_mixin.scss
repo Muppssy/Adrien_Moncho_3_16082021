@@ -44,7 +44,7 @@
         text-align: center;
     }
 
-    .heart__1
+    .heart__1 //coeur vide
     {
         position: relative; 
         transition: all 0.75s;
@@ -60,22 +60,18 @@
 
         &:hover + .heart__2
         {
-            
             visibility: visible;
             transform-origin: center;
             opacity: 1;
             font-size: 1.4em;
-            -webkit-animation-name: zoomIn;
             animation-name: zoomIn;
-            -webkit-animation-duration: 1s;
             animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }  
 
     }
 
-    .heart__2
+    .heart__2 //coeur plein//
     {
     
     position: absolute;
