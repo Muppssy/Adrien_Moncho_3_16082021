@@ -634,15 +634,16 @@ a {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
+  padding: 1.6rem;
 }
 .blocks .card__dishes:hover > .card__valid, .blocks .card__dishes .card__price {
-  margin-left: 2rem;
+  margin: 0 0 0 2rem;
 }
 .blocks .card__dishes:hover .fa-check-circle {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 .blocks .card__valid {
-  padding: 1.6rem;
+  /*padding: 1.6rem;*/
   background: #99E2D0;
   color: #fff;
   border-radius: 0 1rem 1rem 0;
@@ -656,7 +657,7 @@ a {
 }
 .blocks .card__valid .fa-check-circle {
   transition-duration: 1s;
-  transform: rotate(360deg);
+  transform: rotate(0deg);
 }
 .blocks .card__content {
   display: flex;
@@ -665,19 +666,23 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0 0 0 1rem;
 }
 .blocks .card__content h3 {
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 0 0;
   font-size: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .blocks .card__content .text {
-  margin: 0rem 1rem;
   display: flex;
   justify-content: space-between;
   line-height: 2.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 .blocks .card__content .text .text__line, .blocks .card__content .text p {
   white-space: nowrap;
