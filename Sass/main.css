@@ -600,7 +600,7 @@ a {
 .blocks .card {
   margin: 1rem;
   height: auto;
-  width: 30%;
+  width: 31%;
 }
 .blocks .card__border {
   width: 80%;
@@ -637,7 +637,7 @@ a {
   padding: 1.6rem;
 }
 .blocks .card__dishes:hover > .card__valid, .blocks .card__dishes .card__price {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1.2rem;
 }
 .blocks .card__dishes:hover .fa-check-circle {
   transform: rotate(360deg);
